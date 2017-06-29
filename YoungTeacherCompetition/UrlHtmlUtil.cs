@@ -59,11 +59,6 @@ namespace ComputerBS
             HttpSessionState Session = HttpContext.Current.Session; ;
             return ((UserInfo)Session["User"]).UserNo.ToString();
         }
-        public static string GetUserID()
-        {
-            HttpSessionState Session = HttpContext.Current.Session; ;
-            return ((UserInfo)Session["User"]).UserID.ToString();
-        }
         public static string GetSchoolGroupID()
         {
             HttpSessionState Session = HttpContext.Current.Session; ;
@@ -352,11 +347,6 @@ namespace ComputerBS
                     if (dt.Rows.Count > 0)
                     {
                         string ReviewMode = dt.Rows[0]["ReviewMode"].ToString().Trim();//评审方式
-
-                        //按学科评审直接关联 TReviewGroup 表 关联用户名
-                        string UserID = GetUserID();  
-
-                        //按学校和学区评审会使用到AllIDstr SchoolGroupID 
                         string AllIDstr = dt.Rows[0]["AllIDstr"].ToString().Trim();    //评审关联ID
                         string SchoolGroupID = dt.Rows[0]["SchoolGroupID"].ToString().Trim();    //按区县评审会使用
                         sql.Clear();//先清空原先的SQL语句
@@ -364,7 +354,6 @@ namespace ComputerBS
                          * 这里分为两种评审方式
                          *    1、按学校 
                          *    2、按区县
-                         *    3、按学科
                          */
                         sql.Append("SELECT a.EnrollID,a.EntriesName,a.EnrolName,a.EnrolSex,d.DistrictName,b.SchoolName,");
                         sql.Append("e.SchoolGroupName,a.EntriesTime,c.EnrolScore,c.EnrolComment,c.UserID,a.EntriesURL,");
@@ -379,19 +368,10 @@ namespace ComputerBS
                             //学区的评审方式逻辑
                             sql.AppendFormat("  WHERE b.SchoolGroupID = {0}  AND b.DistrictID in ({1}) ", SchoolGroupID, AllIDstr);
                         }
-                        else if ("学校".Equals(ReviewMode))
+                        else
                         {
                             //按学校评审
                             sql.AppendFormat("  WHERE b.SchoolID in ({0}) ", AllIDstr);
-                            
-                        }
-                        else if ("学科".Equals(ReviewMode))
-                        {
-                            
-                        }
-                        else
-                        {
-                            throw new Exception("不存在【" + ReviewMode + "】这种评审方式！");
                         }
                         //sql.AppendFormat(" AND c.UserID = {0} ", myUserNo);
                         sql.Append(" AND a.EntriesName IS NOT NULL;");
