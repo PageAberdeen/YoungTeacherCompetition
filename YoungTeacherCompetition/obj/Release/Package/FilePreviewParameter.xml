@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="test" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Administrator\\Documents\\Visual\ Studio\ 2013\\Projects\\学生电脑制作大赛\\学生电脑制作大赛\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Administrator\\Documents\\Visual\ Studio\ 2013\\Projects\\学生电脑制作大赛\\学生电脑制作大赛\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="constr-Web.config Connection String" description="" value="Data Source=.;Initial Catalog=WebTest;Persist Security Info=True;User ID=sa;Password=123456" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\Documents\\Visual\ Studio\ 2013\\Projects\\学生电脑制作大赛\\学生电脑制作大赛\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='constr']/@connectionString" />
+  </parameter>
+</parameters>

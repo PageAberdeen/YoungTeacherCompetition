@@ -1,0 +1,14 @@
+E:\覃群燕\项目\ComputerBS\ComputerBS\bin\ComputerBS.dll.config
+E:\覃群燕\项目\ComputerBS\ComputerBS\bin\ComputerBS.dll
+E:\覃群燕\项目\ComputerBS\ComputerBS\bin\ComputerBS.pdb
+E:\覃群燕\项目\ComputerBS\ComputerBS\obj\Release\ComputerBS.dll
+E:\覃群燕\项目\ComputerBS\ComputerBS\obj\Release\ComputerBS.pdb
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\bin\ComputerBS.dll.config
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\bin\ComputerBS.dll
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\bin\ComputerBS.pdb
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\obj\Release\ComputerBS.csproj.ResolveComReference.cache
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\obj\Release\ComputerBS.dll
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\obj\Release\ComputerBS.pdb
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\bin\ICSharpCode.SharpZipLib.dll
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\bin\Newtonsoft.Json.dll
+D:\备份文件\我的项目\container\ComputerBS\ComputerBS\ComputerBS\obj\Release\ComputerBS.csprojResolveAssemblyReference.cache

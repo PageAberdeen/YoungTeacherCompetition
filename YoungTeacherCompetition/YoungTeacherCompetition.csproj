@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FF3276B-5A8F-4B0C-BA44-7DF4225ACE4C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComputerBS</RootNamespace>
+    <AssemblyName>ComputerBS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>C:\Users\Administrator\Desktop\SharpZipLib_0860_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Graph, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\FineUI项目实例\FineOA3.2.2(EF)\FineOA3.2.2(EF)\FineOA\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Active.aspx" />
+    <Content Include="AfterReview.aspx" />
+    <Content Include="AllReview.aspx" />
+    <Content Include="bin\ComputerBS.dll" />
+    <Content Include="bin\ComputerBS.pdb" />
+    <Content Include="bin\SutentAndComputer.dll" />
+    <Content Include="bin\SutentAndComputer.pdb" />
+    <Content Include="ckplayer\ckplayer.js" />
+    <Content Include="ckplayer\ckplayer.swf" />
+    <Content Include="ckplayer\ckplayer.xml" />
+    <Content Include="ckplayer\language.xml" />
+    <Content Include="ckplayer\related.xml" />
+    <Content Include="ckplayer\share.xml" />
+    <Content Include="ckplayer\share\feixin.png" />
+    <Content Include="ckplayer\share\google.png" />
+    <Content Include="ckplayer\share\kaixin001.png" />
+    <Content Include="ckplayer\share\msn.png" />
+    <Content Include="ckplayer\share\qq.png" />
+    <Content Include="ckplayer\share\qq2.png" />
+    <Content Include="ckplayer\share\qzone.png" />
+    <Content Include="ckplayer\share\rr.png" />
+    <Content Include="ckplayer\share\sina.png" />
+    <Content Include="ckplayer\share\sohu.png" />
+    <Content Include="ckplayer\share\tianya.png" />
+    <Content Include="ckplayer\style.swf" />
+    <Content Include="Css\AspxCss.css" />
+    <Content Include="Css\base.css" />
+    <Content Include="Css\layout.css" />
+    <Content Include="Css\mend.css" />
+    <Content Include="Css\state.css" />
+    <Content Include="Css\teach_research.css" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="frmExit.aspx" />
+    <Content Include="FrmFillMatchInfo.aspx" />
+    <Content Include="FrmFillMatchInfo2.aspx" />
+    <Content Include="GetReview.aspx" />
+    <Content Include="Css\animation.css" />
+    <Content Include="Css\index5.css" />
+    <Content Include="Css\lizhou_active.css" />
+    <Content Include="Css\public.css" />
+    <Content Include="Css\top.css" />
+    <Content Include="Css\topnew.css" />
+    <Content Include="Css\w_public.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="GetReviewInfo.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GuideLines.aspx" />
+    <Content Include="Image\3.jpg" />
+    <Content Include="Image\4.jpg" />
+    <Content Include="Image\book.png" />
+    <Content Include="Image\bussiness-man.png" />
+    <Content Include="Image\icon.png" />
+    <Content Include="Image\inform-work.png" />
+    <Content Include="Image\liuzhou_banner.png" />
+    <Content Include="Image\loding.gif" />
+    <Content Include="Image\logo\logo.png" />
+    <Content Include="Image\more_unfold.png" />
+    <Content Include="Image\pic1.jpg" />
+    <Content Include="Image\qescape.gif" />
+    <Content Include="Image\sele_down.jpg" />
+    <Content Include="Image\upfile.jpg" />
+    <Content Include="Image\vLoding.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="IntrActive.aspx" />
+    <Content Include="JS\action.js" />
+    <Content Include="JS\ajaxForm.js" />
+    <Content Include="JS\base5.js" />
+    <Content Include="JS\fun.js" />
+    <Content Include="JS\heartbeat.js" />
+    <Content Include="JS\home_echarts.min.js" />
+    <Content Include="JS\index5.js" />
+    <Content Include="JS\jquery.artDialog.js" />
+    <Content Include="JS\jquery.artDialog.plugins.js" />
+    <Content Include="JS\jquery.js" />
+    <Content Include="JS\jquery.mousewheel.min.js" />
+    <Content Include="JS\jquery.qrcode.min.js" />
+    <Content Include="JS\login.js" />
+    <Content Include="JS\paplayer.swf" />
+    <Content Include="JS\percentage.js" />
+    <Content Include="JS\player.swf" />
+    <Content Include="JS\set.xml" />
+    <Content Include="JS\setForshare.xml" />
+    <Content Include="JS\swfobject.js" />
+    <Content Include="JS\topnew.js" />
+    <Content Include="JS\video.js" />
+    <Content Include="Notice.aspx" />
+    <Content Include="obj\Debug\ComputerBS.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ComputerBS.dll" />
+    <Content Include="obj\Debug\ComputerBS.pdb" />
+    <Content Include="obj\Debug\SutentAndComputer.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SutentAndComputer.dll" />
+    <Content Include="obj\Debug\SutentAndComputer.pdb" />
+    <Content Include="obj\Debug\学生电脑制作大赛.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\学生电脑制作大赛.dll" />
+    <Content Include="obj\Debug\学生电脑制作大赛.pdb" />
+    <Content Include="bin\ComputerBS.dll.config" />
+    <Content Include="bin\SutentAndComputer.dll.config" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="ShowAllWorks.aspx" />
+    <Content Include="ShowBestWorks.aspx" />
+    <Content Include="ShowCase.aspx" />
+    <Content Include="ShowInfo.aspx" />
+    <Content Include="ShowOfficeValue.aspx" />
+    <Content Include="ShowVideo.aspx" />
+    <Content Include="ShowWork.aspx" />
+    <Content Include="TfrmShowText.aspx" />
+    <Content Include="UpFile.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="winlist.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Active.aspx.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Active.aspx.designer.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveInfo.cs" />
+    <Compile Include="AfterReview.aspx.cs">
+      <DependentUpon>AfterReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterReview.aspx.designer.cs">
+      <DependentUpon>AfterReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllReview.aspx.cs">
+      <DependentUpon>AllReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllReview.aspx.designer.cs">
+      <DependentUpon>AllReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClsWorksInfo.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="DbHelperSQL.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmExit.aspx.cs">
+      <DependentUpon>frmExit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmExit.aspx.designer.cs">
+      <DependentUpon>frmExit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFillMatchInfo.aspx.cs">
+      <DependentUpon>FrmFillMatchInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmFillMatchInfo.aspx.designer.cs">
+      <DependentUpon>FrmFillMatchInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFillMatchInfo2.aspx.cs">
+      <DependentUpon>FrmFillMatchInfo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmFillMatchInfo2.aspx.designer.cs">
+      <DependentUpon>FrmFillMatchInfo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetReview.aspx.cs">
+      <DependentUpon>GetReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetReview.aspx.designer.cs">
+      <DependentUpon>GetReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetReviewInfo.aspx.cs">
+      <DependentUpon>GetReviewInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetReviewInfo.aspx.designer.cs">
+      <DependentUpon>GetReviewInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GuideLines.aspx.cs">
+      <DependentUpon>GuideLines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuideLines.aspx.designer.cs">
+      <DependentUpon>GuideLines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntrActive.aspx.cs">
+      <DependentUpon>IntrActive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntrActive.aspx.designer.cs">
+      <DependentUpon>IntrActive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowAllWorks.aspx.cs">
+      <DependentUpon>ShowAllWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowAllWorks.aspx.designer.cs">
+      <DependentUpon>ShowAllWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowBestWorks.aspx.cs">
+      <DependentUpon>ShowBestWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowBestWorks.aspx.designer.cs">
+      <DependentUpon>ShowBestWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCase.aspx.cs">
+      <DependentUpon>ShowCase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowCase.aspx.designer.cs">
+      <DependentUpon>ShowCase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowInfo.aspx.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowInfo.aspx.designer.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOfficeValue.aspx.cs">
+      <DependentUpon>ShowOfficeValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowOfficeValue.aspx.designer.cs">
+      <DependentUpon>ShowOfficeValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowVideo.aspx.cs">
+      <DependentUpon>ShowVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowVideo.aspx.designer.cs">
+      <DependentUpon>ShowVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowWork.aspx.cs">
+      <DependentUpon>ShowWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowWork.aspx.designer.cs">
+      <DependentUpon>ShowWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TfrmShowText.aspx.cs">
+      <DependentUpon>TfrmShowText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TfrmShowText.aspx.designer.cs">
+      <DependentUpon>TfrmShowText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpFile.aspx.cs">
+      <DependentUpon>UpFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpFile.aspx.designer.cs">
+      <DependentUpon>UpFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UrlHtmlUtil.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="winlist.aspx.cs">
+      <DependentUpon>winlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="winlist.aspx.designer.cs">
+      <DependentUpon>winlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WriteLogTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Fileupload\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Debug\__testMsDeployConnection__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.Master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="DownFile\柳州市第十七届中学青年教师汇报课局属学校初赛报名表.docx" />
+    <Content Include="DownFile\柳州市第十七届中学青年教师汇报课评比项目及评分标准.docx" />
+    <None Include="obj\Debug\__TestProfilesForFilePreview__\confige.pubxml" />
+    <Content Include="obj\Debug\学生电脑制作大赛.csprojResolveAssemblyReference.cache" />
+    <None Include="Properties\PublishProfiles\myConfig.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29576</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29576/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,115 @@
+.tab-top{/*表格查询功能容器*/
+
+}
+
+.tab-top a{
+    text-decoration: none;
+}
+
+.tab-top td{
+    padding: 0 3px;
+}
+
+.tab-top table{
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.tab-main{/*表格主体*/
+
+}
+
+.tab-main table{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tab-main table tr{
+    line-height: 30px;
+    border: 1px solid #eee;
+}
+
+.tab-main table a{
+    text-decoration: none;
+    font-style: normal;
+}
+
+/*          以上为作品分组表格页面添加样式            */
+
+.container{
+    border: 0;
+}
+
+.cap-vadio{
+    text-align: right;
+}
+
+.cap-vadio a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+}
+
+.cap-vadio .jump-work{
+    font-size: 16px;
+}
+
+/*          以上为作品信息页面样式       */
+
+.small{
+    border: 0;
+}
+
+.Expert-review-after .tit span {
+    border: 0;
+}
+
+
+
+/*          评分页面                */
+
+.down-btn{
+    background-color: #4A99EB;
+    border-style: Dotted;
+    font-size: 24px;
+    height: 57px;
+    width: 283px;
+    margin-top: 30px;
+}
+
+.tab-review{
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tab-review tr{
+    border: 1px solid #eee;
+}
+
+.tab-review th{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fbfbfb;
+}
+
+.tab-review td input{
+    text-align: center;
+}
+
+.Expert-review-after .w633{
+    width: 100%;
+}
+
+.Expert-review-after .stu_textarea{
+    width: 100%;
+    height: 60px;
+}
+
+.turnPage a{
+    cursor: pointer;
+}
+
+.sub-grade{
+    display: none;
+}

@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Release\SutentAndComputer.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Release\SutentAndComputer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Release\SutentAndComputer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,247 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.Master.cs" Inherits="ComputerBS.index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第十八届全国中小学电脑制作活动</title>
+    <link rel="shortcut icon" href="http://lzyun.doule.net:20199/tianyu_edu/area/450200/images/logo/edu.ico" type="image/x-icon"/>
+    <link  href="Css/index5.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link  href="Css/animation.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="Css/w_public.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="../Css/public.css" rel="stylesheet" type="text/css" runat="server" />
+    <link href="../Css/top.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="../Css/lizhou_active.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link  href="Css/teach_research.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="Css/AspxCss.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="Css/base.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="Css/state.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="Css/layout.css" rel="stylesheet" type="text/css" runat="server"/>
+    <script type="text/javascript" src="./JS/jquery.js"></script>
+    <script type="text/javascript" src="./JS/fun.js"></script>
+    <script type="text/javascript" src="./JS/ajaxForm.js"></script>
+    <script type="text/javascript" src="./JS/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="./JS/jquery.artDialog.plugins.js"></script>
+    <script type="text/javascript" src="./JS/topnew.js"></script>
+    <script type="text/javascript" src="./JS/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="JS/Plug.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="g_header">
+            <div class="m_wrap m_header clearfix">
+                <h1 class="logo fl"><a href="#">
+                    <img src="Image/logo/logo.png" alt="" /></a></h1>
+                <div class="r_rect">
+                    <ul class="menu fl">
+                        <li><a href="http://lzyun.doule.net/" class="menuA">首页</a></li>
+                        <li><a href="http://res.lzyun.doule.net/cms-portal" class="menuA">资源 </a></li>
+                        <li><a href="http://apps.lzyun.doule.net/" class="menuA">应用</a></li>
+                        <li><a href="http://lzyun.doule.net/index.php?r=studio/community" class="menuA">名师</a></li>
+                        <li><a href="http://lzyun.doule.net/index.php?r=activity/activitylzzxxspace/notice" class="menuA">活动</a></li>
+                        <li><a href="http://lzyun.doule.net/index.php?r=portal/ExperienceCenter" class="menuA">体验中心</a></li>
+                    </ul>
+                    <div class="head_nav">
+                        <p class="navLoginRect fl">
+                            <%--onclick="userLogin(&#39;UserSet&#39;,&#39;skip&#39;)"--%>
+                            <asp:Literal ID="ChangeType" runat="server"></asp:Literal>
+                        </p>
+                       
+                        <p class="navLink fl">
+                            <a href="#" class="menu_r_a1">教学助手</a><a href="#"
+                                class="menu_r_a2">家校帮</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner" style="background:url(Image/liuzhou_banner.png) no-repeat center; height:414px">
+
+        </div>
+        <div class="nav">
+            <div class="w1000 clearfix">
+                <div class="right fr">
+                    <ul class="clearfix">
+                        <li><a href="TfrmShowText.aspx" class="upload mgr10" id="sczp" >申报入口</a></li>
+                        <li><a href="ShowBestWorks.aspx" id="zjps"class="look" target="_parent">专家评审</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="left">
+                    <ul class="clearfix" id="menu">
+                        <li class="active"><a href="Index.aspx" target="_parent"><i></i>首页</a></li>
+                        <li><a href="IntrActive.aspx" target="_parent"><i></i>活动介绍</a></li>
+                        <li><a href="GuideLines.aspx" target="_parent"><i></i>活动指南</a></li>                        
+                        <li><a href="winlist.aspx"><i></i>获奖名单</a></li>                  
+                    </ul>
+                    <script type="text/javascript">
+                        $('#menu li a').each(function () {
+                            if ($($(this))[0].href == String(window.location)) {
+                                $(this).parent().addClass('active');
+                            } else {
+                                $(this).parent().removeClass('active');
+                            }
+
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="cap_borderbox"> 
+            <div class="w1000 clearfix"> 
+                <div class="cap_process fl"> 
+                    <i <%--class="passed"--%>>1</i><span>9.10-9.20<br/><big>初赛报名</big></span><em class="arrow"></em>
+                    <i <%--class="passed"--%>>2</i><span>9.20-9.30<br/><big>复赛报名</big></span><em class="arrow"></em>
+                    <i>3</i><span>待定<br><big>专家评审</big></span><em class="arrow"></em>
+                    <i>4</i><span>待定<br><big>结果显示</big></span>
+                </div>
+                <div class="cap_count fr">
+                    <p><span data-num="0000">参与人数</span><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></p>
+                    <p><span data-num="00000">已有作品</span><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></p>
+                </div>
+            </div> 
+        </div>
+        <link href="http://lzyun.doule.net:20199/tianyu_edu/area/450200/css/topnew.css?v=1489645228" rel="stylesheet" type="text/css">
+        <div class="m_login" id="m_login">
+            <div data-url="http://lzyun.doule.net/index.php?r=portal/user/doLogin&ajax=1" method="post" id="loginForm-1" message_id="loginTips">
+                <div class="item-newLogo-rect">
+                    <div class="m_close" id="m_close"><span>关闭</span></div>
+                    <a href="###" class="logoCaseTab" id="logoCaseTab"></a>
+                    <p class="logoTips dis_none"><i class="ico1"></i><i class="ico2"></i><span>扫码登录更安全</span></p>
+                    <div class="passWord-case dis_none" name="LoginRect">
+                        <h4>空间登录</h4>
+                        <div class="err-tips" id="_user_login_tips" style="display: none;"></div>
+                        <ul class="inputlist clearfix">
+                            <li class="u_inputtext">
+                                <input type="text" id="info_username-1" name="account" tabindex="1" placeholder="用户名/手机号" />
+                            </li>
+                            <li class="u_inputpassword">
+                                <input type="password" id="info_password-1" name="pwd" tabindex="2" placeholder="请输入您的密码" />
+                            </li>
+                        </ul>
+                        <div class="test_code clearfix dis_none">
+                            <input id='valCode11' type="text" placeholder="请输入验证码">
+                            <div class="codeimg">
+                                <img id="cimage" width="99" height="37" alt="" vaildata="" src="" onclick='getVcode();'>
+                            </div>
+                        </div>
+                        <div class="login_other_rect clearfix">
+                            <div class="rememberMe fl">
+                                <p class="fl"><span></span></p>
+                                自动登录
+                            </div>
+                            <input type="hidden" id="remember" name="remember" value="0" />
+                            <p class="fr">
+                                <a href="http://lzyun.doule.net/index.php?r=portal/resetPassword" target="_top" class="forget">忘记密码？</a>
+
+                            </p>
+                        </div>
+                        <input type="button" value="立即登录" class="login_btn UserLoginBtn-1 m_btn submit" />
+                        <div class="no_account">没有账号？<a class="a1" href="http://lzyun.doule.net/index.php?r=portal/register/index">立即注册</a></div>
+
+                    </div>
+                    <!--扫码部分 start-->
+                    <div name="LoginRect" class="smLoing-rect dis_none">
+                        <h4 class="t_c ">手机扫码，安全登录</h4>
+                        <div class="sm-case" id="loadding">
+                            <div class="smLoginRect clearfix" id="qr_div">
+                                <div class="wxLogin-img fl" style="width: 125px; height: 125px; border: 5px solid #ffffff;">
+                                    <div id="portal_qrcode"></div>
+                                    <span class="wx_bg"></span>
+                                </div>
+                                <img class="wxLoign-tips-img" src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/images/index0906/wxLogin_tips_img.png" width="123" height="184" alt="" />
+                            </div>
+                        </div>
+                        <div class="sm-invalid dis_none">
+                            <div class="invalid-rect">
+                                <img class="wxLogin-img" src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/images/index0906/wxLogin_img.jpg" width="125" height="125" alt="" />
+                                <strong class="tips">二维码已失效</strong> <a href="javascript:;" id="reload_qrcode">请点击刷新</a>
+                            </div>
+                        </div>
+                        <div class="sm-text-tips cfff t_c f14">
+                            <i>
+                                <img src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/images/index0906/sm_ico.png" width="27" height="27" alt="" class="mgr10" /></i>请打开<a href="http://jxb.lzyun.doule.net">家校帮</a>扫一扫登录
+                        </div>
+                    </div>
+                    <div class="sm-finish dis_none">
+                        <h4 class="t_c ">手机扫码，安全登录</h4>
+                        <div class="finish-rect t_c cfff">
+                            <img src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/images/index0906/wxLogin_finish.png" width="67" height="97" alt="" />
+                            <p class="txt" id="QRinfo1">扫描成功！</p>
+                            <p class="f14 mgt10"><strong id="QRinfo2">请在手机上确认登录</strong></p>
+                            <p class="f14 mgt10"><a href="javascript:;" id="reload_qrcode1">取消二维码登录</a></p>
+                        </div>
+                    </div>
+                    <input type="hidden" value="" name="userAction" id="userAction" />
+                    <input type="hidden" id="qr_token" value="" />
+                    <input type="hidden" id="qr_status" value="" />
+                    <!--扫码部分 end-->
+                </div>
+                </div>
+            </div>
+        <div class="m_mask" id="m_mask"></div>
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/js/login.js?v=1489645228"></script>
+        <script type='text/javascript' src='http://lzyun.doule.net/statics/common/js/qrcode/jquery.qrcode.min.js?v201610071452'></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $("#sczp").click(function () {
+                    var currentHost = 'http://' + window.location.host;
+                    var clientPath = "http://lzyun.doule.net/index.php?r=portal/user/login&service=" + currentHost + "/UpFile.aspx";
+                    window.location.href = clientPath;
+                    
+                });
+            })
+            $(function () {
+                $("#login_btn").click(function () {
+                    var currentHost=window.location;
+                    var clientPath = "http://lzyun.doule.net/index.php?r=portal/user/login&service=" + currentHost;
+                    window.location.href = clientPath;
+                });
+            })
+            //$(function () {
+            //    $("#zjps").click(function () {
+            //        var currentHost = 'http://' + window.location.host;
+            //        var clientPath = "http://lzyun.doule.net/index.php?r=portal/user/login&service=" + currentHost+"/ShowAllWorks.aspx";
+            //        window.location.href = clientPath;
+            //    });
+            //})
+
+
+           <%-- //获取用户信息
+            function getInfo() {
+                var currentHost = 'http://' + window.location.host;
+                var clientPath = "http://lzyun.doule.net/index.php?r=portal/user/login&service=" + currentHost + "/UpFile.aspx";
+                $.get(clientPath, function (data, status) {
+                    alert("Data: " + data + "nStatus: " + status);
+                });
+                //alert(currentHost);
+            }--%>
+        </script>
+        <!--底部模板解析耗时：0.0009/redis取值：-->
+        <!--//登录框 end-->
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/js/base5.js"></script>
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/area/450200/js/index5.js"></script>
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/common/js/percentage.js"></script>
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/common/js/home_echarts.min.js"></script>
+        <script type="text/javascript" src="http://lzyun.doule.net:20199/tianyu_edu/common/js/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript">
+
+            $("div[name='tab']").tabControl("*[name='tabTit'] li", "*[name='tabCon']");
+            Percentage.init($('canvas'));
+        </script>
+        <script type="text/javascript" src="http://lzyun.doule.net/protected/widgets/heartbeat/js/heartbeat.js?url=http%3A%2F%2Flzyun.doule.net"></script>
+        <div>
+            <asp:ContentPlaceHolder ID="MainBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

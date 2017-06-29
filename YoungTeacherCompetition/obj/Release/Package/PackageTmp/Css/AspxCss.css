@@ -1,0 +1,20 @@
+﻿body {
+}
+.dropDown {
+    height:30px;
+    line-height:30px;
+    width: 106px;
+}
+.btnDown {
+    padding: 2px 4px 0 4px; 
+    font-size: 12px; 
+    height: 23px; 
+    background-color: #ece9d8; 
+    border-width: 1px; 
+}
+.btnSelectBT {
+    background:#4a99eb;
+}
+.Gethand {
+    cursor:hand;
+}

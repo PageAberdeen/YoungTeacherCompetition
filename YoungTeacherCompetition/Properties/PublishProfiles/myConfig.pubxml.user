@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\YoungTeacherCompetition</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Active.aspx">
+      <publishTime>04/07/2017 22:56:24</publishTime>
+    </File>
+    <File Include="Active1.aspx">
+      <publishTime>03/16/2017 19:10:17</publishTime>
+    </File>
+    <File Include="AfterReview.aspx">
+      <publishTime>04/07/2017 21:45:04</publishTime>
+    </File>
+    <File Include="AllReview.aspx">
+      <publishTime>04/07/2017 21:45:04</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>06/21/2017 16:03:21</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>06/21/2017 16:03:21</publishTime>
+    </File>
+    <File Include="bin/ComputerBS.dll">
+      <publishTime>06/21/2017 16:03:19</publishTime>
+    </File>
+    <File Include="bin/ComputerBS.dll.config">
+      <publishTime>06/21/2017 15:40:18</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>05/25/2010 12:55:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Excel.dll">
+      <publishTime>01/31/2014 00:28:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Word.dll">
+      <publishTime>01/31/2014 00:28:30</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/02/2013 12:10:10</publishTime>
+    </File>
+    <File Include="bin/SutentAndComputer.dll">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="bin/SutentAndComputer.dll.config">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="bin/学生电脑制作大赛.dll">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="bin/学生电脑制作大赛.dll.config">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="ckplayer/ckplayer.js">
+      <publishTime>04/01/2017 11:36:18</publishTime>
+    </File>
+    <File Include="ckplayer/ckplayer.swf">
+      <publishTime>06/24/2016 21:52:38</publishTime>
+    </File>
+    <File Include="ckplayer/ckplayer.xml">
+      <publishTime>05/08/2016 11:15:52</publishTime>
+    </File>
+    <File Include="ckplayer/language.xml">
+      <publishTime>06/03/2016 23:15:28</publishTime>
+    </File>
+    <File Include="ckplayer/related.xml">
+      <publishTime>06/04/2016 22:59:10</publishTime>
+    </File>
+    <File Include="ckplayer/share.xml">
+      <publishTime>03/15/2015 16:00:44</publishTime>
+    </File>
+    <File Include="ckplayer/share/feixin.png">
+      <publishTime>03/15/2015 16:00:44</publishTime>
+    </File>
+    <File Include="ckplayer/share/google.png">
+      <publishTime>03/15/2015 16:00:44</publishTime>
+    </File>
+    <File Include="ckplayer/share/kaixin001.png">
+      <publishTime>03/15/2015 16:00:46</publishTime>
+    </File>
+    <File Include="ckplayer/share/msn.png">
+      <publishTime>03/15/2015 16:00:46</publishTime>
+    </File>
+    <File Include="ckplayer/share/qq.png">
+      <publishTime>03/15/2015 16:00:46</publishTime>
+    </File>
+    <File Include="ckplayer/share/qq2.png">
+      <publishTime>03/15/2015 16:00:46</publishTime>
+    </File>
+    <File Include="ckplayer/share/qzone.png">
+      <publishTime>03/15/2015 16:00:48</publishTime>
+    </File>
+    <File Include="ckplayer/share/rr.png">
+      <publishTime>03/15/2015 16:00:48</publishTime>
+    </File>
+    <File Include="ckplayer/share/sina.png">
+      <publishTime>03/15/2015 16:00:46</publishTime>
+    </File>
+    <File Include="ckplayer/share/sohu.png">
+      <publishTime>03/15/2015 16:00:50</publishTime>
+    </File>
+    <File Include="ckplayer/share/tianya.png">
+      <publishTime>03/15/2015 16:00:48</publishTime>
+    </File>
+    <File Include="ckplayer/style.swf">
+      <publishTime>07/14/2016 23:06:24</publishTime>
+    </File>
+    <File Include="Css/animation.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Css/AspxCss.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Css/base.css">
+      <publishTime>03/30/2017 15:56:52</publishTime>
+    </File>
+    <File Include="Css/index5.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Css/layout.css">
+      <publishTime>06/20/2017 09:55:23</publishTime>
+    </File>
+    <File Include="Css/lizhou_active.css">
+      <publishTime>06/07/2017 17:13:18</publishTime>
+    </File>
+    <File Include="Css/mend.css">
+      <publishTime>04/07/2017 09:44:22</publishTime>
+    </File>
+    <File Include="Css/public.css">
+      <publishTime>03/27/2017 10:17:28</publishTime>
+    </File>
+    <File Include="Css/state.css">
+      <publishTime>06/09/2017 08:56:22</publishTime>
+    </File>
+    <File Include="Css/teach_research.css">
+      <publishTime>06/08/2017 17:40:38</publishTime>
+    </File>
+    <File Include="Css/top.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Css/topnew.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Css/w_public.css">
+      <publishTime>03/27/2017 09:35:26</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="DownFile/公告通知——第十八届中小学电脑制作活动指南.doc">
+      <publishTime>04/07/2017 22:52:52</publishTime>
+    </File>
+    <File Include="DownFile/柳州市第十七届中学青年教师汇报课局属学校初赛报名表.docx">
+      <publishTime>06/01/2017 17:37:38</publishTime>
+    </File>
+    <File Include="DownFile/柳州市第十七届中学青年教师汇报课评比项目及评分标准.docx">
+      <publishTime>06/01/2017 17:37:24</publishTime>
+    </File>
+    <File Include="DownFile/活动动态——关于举办第十八届全国中小学电脑制作活动的通知.docx">
+      <publishTime>04/07/2017 22:54:12</publishTime>
+    </File>
+    <File Include="DownFile/活动简介——第十八届中小学电脑制作活动指南.doc">
+      <publishTime>04/07/2017 22:17:34</publishTime>
+    </File>
+    <File Include="ErrorPage.aspx">
+      <publishTime>04/01/2017 11:17:14</publishTime>
+    </File>
+    <File Include="Fileupload/JY5501007-2017关于发动机零部件二维码后续事宜的会议纪要.doc">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/PV生产制造_发动机质量召回管理系统项目周报_南宁搜诺_2017年第07周更新版.xls">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/PV生产制造_发动机质量召回管理系统项目周报_南宁搜诺_2017年第08周1.xls">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/PV生产制造_发动机质量召回管理系统项目周报_南宁搜诺_2017年第10周.xls">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/xx/雏鹰小报.docx">
+      <publishTime>04/09/2017 19:45:38</publishTime>
+    </File>
+    <File Include="Fileupload/发动机二维码扫描枪测试报告 07周.xlsx">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/发动机二维码扫描枪测试报告 08周.xlsx">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Fileupload/发动机质量召回项目说明.docx">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="frmExit.aspx">
+      <publishTime>06/20/2017 10:19:20</publishTime>
+    </File>
+    <File Include="FrmFillMatchInfo.aspx">
+      <publishTime>06/15/2017 17:58:04</publishTime>
+    </File>
+    <File Include="FrmFillMatchInfo2.aspx">
+      <publishTime>06/15/2017 17:57:50</publishTime>
+    </File>
+    <File Include="GetReview.aspx">
+      <publishTime>04/07/2017 21:42:42</publishTime>
+    </File>
+    <File Include="GetReviewInfo.aspx">
+      <publishTime>06/12/2017 18:01:38</publishTime>
+    </File>
+    <File Include="guidelines.aspx">
+      <publishTime>06/07/2017 17:11:18</publishTime>
+    </File>
+    <File Include="guidelines1.aspx">
+      <publishTime>03/20/2017 09:24:06</publishTime>
+    </File>
+    <File Include="IframeTest.aspx">
+      <publishTime>03/16/2017 19:10:17</publishTime>
+    </File>
+    <File Include="Image/3.jpg">
+      <publishTime>06/07/2017 15:52:54</publishTime>
+    </File>
+    <File Include="Image/4.jpg">
+      <publishTime>06/07/2017 15:53:30</publishTime>
+    </File>
+    <File Include="Image/book.png">
+      <publishTime>04/10/2017 07:51:42</publishTime>
+    </File>
+    <File Include="Image/bussiness-man.png">
+      <publishTime>06/19/2017 09:36:44</publishTime>
+    </File>
+    <File Include="Image/icon.png">
+      <publishTime>06/01/2017 08:52:10</publishTime>
+    </File>
+    <File Include="Image/inform-work.png">
+      <publishTime>06/01/2017 17:32:40</publishTime>
+    </File>
+    <File Include="Image/liuzhou_banner.png">
+      <publishTime>06/07/2017 15:27:48</publishTime>
+    </File>
+    <File Include="Image/loding.gif">
+      <publishTime>06/07/2017 16:08:40</publishTime>
+    </File>
+    <File Include="Image/logo/logo.png">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Image/more_unfold.png">
+      <publishTime>06/01/2017 10:13:06</publishTime>
+    </File>
+    <File Include="Image/pic1.jpg">
+      <publishTime>03/27/2017 09:35:34</publishTime>
+    </File>
+    <File Include="Image/qescape.gif">
+      <publishTime>06/07/2017 17:04:04</publishTime>
+    </File>
+    <File Include="Image/sele_down.jpg">
+      <publishTime>06/08/2017 14:28:44</publishTime>
+    </File>
+    <File Include="Image/upfile.jpg">
+      <publishTime>06/15/2017 13:34:26</publishTime>
+    </File>
+    <File Include="Image/vLoding.gif">
+      <publishTime>06/07/2017 16:31:18</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>06/07/2017 16:11:40</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>03/15/2017 13:41:14</publishTime>
+    </File>
+    <File Include="index.Master">
+      <publishTime>06/20/2017 14:43:30</publishTime>
+    </File>
+    <File Include="index1.aspx">
+      <publishTime>03/17/2017 08:40:36</publishTime>
+    </File>
+    <File Include="IntrActive.aspx">
+      <publishTime>06/08/2017 11:24:56</publishTime>
+    </File>
+    <File Include="JS/action.js">
+      <publishTime>04/16/2017 19:04:38</publishTime>
+    </File>
+    <File Include="JS/ajaxForm.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/base5.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/fun.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/heartbeat.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/home_echarts.min.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/index5.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/jquery.artDialog.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/jquery.artDialog.plugins.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/jquery.js">
+      <publishTime>04/18/2011 09:36:10</publishTime>
+    </File>
+    <File Include="JS/jquery.mousewheel.min.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/jquery.qrcode.min.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/login.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/paplayer.swf">
+      <publishTime>04/20/2015 17:50:26</publishTime>
+    </File>
+    <File Include="JS/percentage.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/player.swf">
+      <publishTime>04/20/2015 10:33:56</publishTime>
+    </File>
+    <File Include="JS/set.xml">
+      <publishTime>04/16/2017 19:04:38</publishTime>
+    </File>
+    <File Include="JS/setForshare.xml">
+      <publishTime>04/16/2017 19:04:38</publishTime>
+    </File>
+    <File Include="JS/swfobject.js">
+      <publishTime>11/11/2010 14:05:56</publishTime>
+    </File>
+    <File Include="JS/topnew.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="JS/video.js">
+      <publishTime>04/16/2017 19:57:02</publishTime>
+    </File>
+    <File Include="notice.aspx">
+      <publishTime>04/09/2017 23:54:18</publishTime>
+    </File>
+    <File Include="notice1.aspx">
+      <publishTime>03/16/2017 19:10:17</publishTime>
+    </File>
+    <File Include="PDF/JY5501007-2017关于发动机零部件二维码后续事宜的会议纪要.pdf">
+      <publishTime>03/31/2017 13:43:24</publishTime>
+    </File>
+    <File Include="PDF/发动机二维码扫描枪测试报告 07周.pdf">
+      <publishTime>03/31/2017 15:16:50</publishTime>
+    </File>
+    <File Include="PDF/国家教育资源公共服务平台开放API接口规范V416（柳州）.pdf">
+      <publishTime>03/31/2017 21:48:16</publishTime>
+    </File>
+    <File Include="PDF/集配区投料防错项目方案V11.pdf">
+      <publishTime>03/31/2017 14:41:56</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>06/21/2017 16:03:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.intellisense.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.7.1.min.js">
+      <publishTime>03/27/2017 09:35:36</publishTime>
+    </File>
+    <File Include="ShowAllWorks.aspx">
+      <publishTime>06/08/2017 14:32:30</publishTime>
+    </File>
+    <File Include="ShowBestWorks.aspx">
+      <publishTime>06/21/2017 14:53:01</publishTime>
+    </File>
+    <File Include="ShowCase.aspx">
+      <publishTime>04/07/2017 21:42:48</publishTime>
+    </File>
+    <File Include="ShowInfo.aspx">
+      <publishTime>04/07/2017 21:42:44</publishTime>
+    </File>
+    <File Include="ShowOfficeValue.aspx">
+      <publishTime>03/31/2017 13:58:22</publishTime>
+    </File>
+    <File Include="ShowVideo.aspx">
+      <publishTime>06/15/2017 17:45:44</publishTime>
+    </File>
+    <File Include="ShowWork.aspx">
+      <publishTime>06/21/2017 14:54:17</publishTime>
+    </File>
+    <File Include="test.aspx">
+      <publishTime>03/16/2017 19:10:17</publishTime>
+    </File>
+    <File Include="TestForTest.aspx">
+      <publishTime>03/29/2017 16:23:09</publishTime>
+    </File>
+    <File Include="TfrmShowText.aspx">
+      <publishTime>06/13/2017 16:41:48</publishTime>
+    </File>
+    <File Include="UpFile.aspx">
+      <publishTime>06/15/2017 14:09:14</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/21/2017 16:03:20</publishTime>
+    </File>
+    <File Include="winlist.aspx">
+      <publishTime>06/01/2017 17:56:50</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

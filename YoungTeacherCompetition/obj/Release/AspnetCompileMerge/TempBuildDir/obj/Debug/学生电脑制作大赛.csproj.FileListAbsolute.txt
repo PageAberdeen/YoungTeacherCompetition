@@ -1,0 +1,6 @@
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\学生电脑制作大赛.dll.config
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\学生电脑制作大赛.dll
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\学生电脑制作大赛.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\学生电脑制作大赛.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\学生电脑制作大赛.dll
+c:\users\administrator\documents\visual studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\学生电脑制作大赛.pdb

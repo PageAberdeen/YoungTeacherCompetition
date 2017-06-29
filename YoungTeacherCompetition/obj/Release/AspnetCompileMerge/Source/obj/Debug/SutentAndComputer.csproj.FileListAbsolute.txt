@@ -1,0 +1,11 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\bin\SutentAndComputer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\SutentAndComputer.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\SutentAndComputer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\学生电脑制作大赛\学生电脑制作大赛\obj\Debug\SutentAndComputer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\总工会文件\学生电脑制作大赛\学生电脑制作大赛\项目文件\ComputerBS\学生电脑制作大赛\bin\SutentAndComputer.dll.config
+C:\Users\Administrator\Desktop\总工会文件\学生电脑制作大赛\学生电脑制作大赛\项目文件\ComputerBS\学生电脑制作大赛\bin\SutentAndComputer.dll
+C:\Users\Administrator\Desktop\总工会文件\学生电脑制作大赛\学生电脑制作大赛\项目文件\ComputerBS\学生电脑制作大赛\bin\SutentAndComputer.pdb
+C:\Users\Administrator\Desktop\总工会文件\学生电脑制作大赛\学生电脑制作大赛\项目文件\ComputerBS\学生电脑制作大赛\obj\Debug\SutentAndComputer.dll
+C:\Users\Administrator\Desktop\总工会文件\学生电脑制作大赛\学生电脑制作大赛\项目文件\ComputerBS\学生电脑制作大赛\obj\Debug\SutentAndComputer.pdb

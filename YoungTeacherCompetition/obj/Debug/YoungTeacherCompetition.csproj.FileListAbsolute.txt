@@ -1,0 +1,78 @@
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\obj\Debug\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\obj\Debug\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\ComputerBS\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\office.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Vbe.Interop.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017.6.7工作文件夹\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-9YoungTeacherCompetition\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\office.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Vbe.Interop.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\office.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Vbe.Interop.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+C:\Users\Administrator\Desktop\2017-6-15\2017-6-14\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Debug\ComputerBS.pdb

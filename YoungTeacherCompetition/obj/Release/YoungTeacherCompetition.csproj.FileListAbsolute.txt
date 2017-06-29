@@ -1,0 +1,9 @@
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll.config
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\ComputerBS.pdb
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Excel.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Microsoft.Office.Interop.Word.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\bin\Newtonsoft.Json.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Release\YoungTeacherCompetition.csproj.ResolveComReference.cache
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Release\ComputerBS.dll
+E:\廖建民工作目录\教育云\青赛课活动\2017-6-19\YoungTeacherCompetition - 副本\YoungTeacherCompetition\obj\Release\ComputerBS.pdb
