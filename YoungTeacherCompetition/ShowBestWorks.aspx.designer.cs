@@ -13,6 +13,15 @@ namespace ComputerBS {
     public partial class ShowBestWorks {
         
         /// <summary>
+        /// sm_test 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager sm_test;
+        
+        /// <summary>
         /// DropList_District 控件。
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace ComputerBS {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropList_SchoolGroup;
+        
+        /// <summary>
+        /// liSubject 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liSubject;
         
         /// <summary>
         /// DropList_Subject 控件。
@@ -74,6 +92,15 @@ namespace ComputerBS {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputButton names;
+        
+        /// <summary>
+        /// Btn_Select 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Select;
         
         /// <summary>
         /// But_outdata 控件。

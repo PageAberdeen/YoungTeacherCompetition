@@ -1,25 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="ShowBestWorks.aspx.cs" Inherits="ComputerBS.ShowBestWorks" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainBody" runat="server">
     <link href="css/mend.css" rel="stylesheet" />
-    <%-- <ContentTemplate>--%>
-       <%-- <ContentTemplate>--%>
+    <asp:ScriptManager ID="sm_test" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
             <div class="main w1000">
                 <ul class="menu-box clearfix">
-                     <li><span class="menu-box-title">区属：</span><asp:DropDownList ID="DropList_District" runat="server" class="menu-box-select" >
+                    
+                     <li><span class="menu-box-title">区属：</span><asp:DropDownList ID="DropList_District" runat="server" class="menu-box-select" AutoPostBack="True" OnSelectedIndexChanged="DropListSelectedIndexChanged" >
                          </asp:DropDownList>
                      </li>
-                     <li><span class="menu-box-title">学校：</span><asp:DropDownList ID="DropList_School" runat="server" class="menu-box-select">
+                     <li><span class="menu-box-title">学校：</span><asp:DropDownList ID="DropList_School" runat="server" class="menu-box-select" AutoPostBack="True" OnSelectedIndexChanged="DropListSelectedIndexChanged">
                          </asp:DropDownList>
                      </li>
-                     <li><span class="menu-box-title">学段：</span><asp:DropDownList ID="DropList_SchoolGroup" runat="server" class="menu-box-select">
+                     <li><span class="menu-box-title">学段：</span><asp:DropDownList ID="DropList_SchoolGroup" runat="server" class="menu-box-select" AutoPostBack="True" OnSelectedIndexChanged="DropListSelectedIndexChanged">
                          </asp:DropDownList>
                      </li>
-                     <li><span class="menu-box-title">学科：</span><asp:DropDownList ID="DropList_Subject" runat="server" class="menu-box-select">
-                         </asp:DropDownList>
-                     </li>
-                     <li><span class="menu-box-title">状态：</span><asp:DropDownList ID="DropList_AuditStatus" runat="server" class="menu-box-select">
+                    <li runat="server" id="liSubject"><span class="menu-box-title">学科：</span><asp:DropDownList ID="DropList_Subject" runat="server" class="menu-box-select" AutoPostBack="True" OnSelectedIndexChanged="DropListSelectedIndexChanged">
+                    </asp:DropDownList>
+                    </li>
+                     <li><span class="menu-box-title">状态：</span><asp:DropDownList ID="DropList_AuditStatus" runat="server" class="menu-box-select" AutoPostBack="True" OnSelectedIndexChanged="DropListSelectedIndexChanged">
                          <asp:ListItem>全部</asp:ListItem>
                          <asp:ListItem Value="1">已审核</asp:ListItem>
                          <asp:ListItem Value="0">未审核</asp:ListItem>
@@ -27,6 +31,7 @@
                      </li>
                      <li>
                          <input type="text" runat="server" id="inputtext" name="search" value=" " class="inp"/><input class="button blue" id="names" runat="server"  value="搜索" type="button" style="height:29px;cursor:pointer;"/>
+                         <asp:Button ID="Btn_Select" runat="server" OnClick="Btn_Select_Click" Text="搜索" />
                      </li>
                     <li><asp:Button ID="But_outdata" class="download-btn" runat="server" OnClick="But_outdata_Click" Text="导出数据" />
                      </li>
@@ -87,7 +92,11 @@
                                 </table>
                             </PagerTemplate>
                         </asp:GridView>
-
+   </ContentTemplate>
+        <Triggers>
+            <%--<asp:PostBackTrigger ControlID="GetGroup" />--%>
+        </Triggers>
+    </asp:UpdatePanel>
 
     <div class="g_footer" data="widgets/portal/portal_template/views/commonfooter.php">
         <div class="m_wrap clearfix">
@@ -109,3 +118,4 @@
         </div>
     </div>
 </asp:Content>
+

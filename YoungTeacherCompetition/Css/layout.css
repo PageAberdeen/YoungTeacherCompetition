@@ -5,6 +5,7 @@ button,
 select {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-appearance: none;
+    margin-top: 0px;
 }
 
 a {

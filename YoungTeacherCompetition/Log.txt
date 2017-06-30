@@ -1,0 +1,10 @@
+2017-06-29 17:35:11：  ---------  e:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\ShowBestWorks.aspx(10): error CS1061: “ASP.showbestworks_aspx”不包含“DropList_District_SelectedIndexChanged”的定义，并且找不到可接受类型为“ASP.showbestworks_aspx”的第一个参数的扩展方法“DropList_District_SelectedIndexChanged”(是否缺少 using 指令或程序集引用?)
+2017-06-29 17:35:31：  ---------  e:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\ShowBestWorks.aspx(10): error CS1061: “ASP.showbestworks_aspx”不包含“DropList_District_SelectedIndexChanged”的定义，并且找不到可接受类型为“ASP.showbestworks_aspx”的第一个参数的扩展方法“DropList_District_SelectedIndexChanged”(是否缺少 using 指令或程序集引用?)
+2017-06-29 17:48:17：  ---------  e:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\ShowBestWorks.aspx(33): error CS1061: “ASP.showbestworks_aspx”不包含“Button1_Click”的定义，并且找不到可接受类型为“ASP.showbestworks_aspx”的第一个参数的扩展方法“Button1_Click”(是否缺少 using 指令或程序集引用?)
+2017-06-29 17:54:44：  ---------  e:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\ShowBestWorks.aspx(10): error CS1061: “ASP.showbestworks_aspx”不包含“DropList_District_TextChanged”的定义，并且找不到可接受类型为“ASP.showbestworks_aspx”的第一个参数的扩展方法“DropList_District_TextChanged”(是否缺少 using 指令或程序集引用?)
+2017-06-29 17:54:51：  ---------  e:\廖建民工作目录\教育云\青赛课活动\YoungTeacherCompetition\YoungTeacherCompetition\ShowBestWorks.aspx(10): error CS1061: “ASP.showbestworks_aspx”不包含“DropList_District_TextChanged”的定义，并且找不到可接受类型为“ASP.showbestworks_aspx”的第一个参数的扩展方法“DropList_District_TextChanged”(是否缺少 using 指令或程序集引用?)
+2017-06-30 12:06:36：  ---------  未将对象引用设置到对象的实例。
+2017-06-30 13:54:49：  ---------  无法找到表 0。
+2017-06-30 16:44:33：  ---------  无法找到表 0。
+2017-06-30 16:44:57：  ---------  无法找到表 0。
+2017-06-30 16:45:01：  ---------  无法找到表 0。

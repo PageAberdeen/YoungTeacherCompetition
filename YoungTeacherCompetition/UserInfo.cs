@@ -138,4 +138,38 @@ namespace ComputerBS
         }
 
     }
+
+    public class ClsFindText
+    {
+        private string _District, _School, _SchoolGroup, _Subject, _AuditStatus;
+        public string District 
+        {
+            get { return _District; }
+            set { _District = value; }
+        }
+        public string School
+        {
+            get { return _School; }
+            set { _School = value; }
+        }
+
+        public string SchoolGroup
+        {
+            get { return _SchoolGroup; }
+            set { _SchoolGroup = value; }
+        }
+
+        public string Subject
+        {
+            get { return _Subject; }
+            set { _Subject = value; }
+        }
+
+        public string AuditStatus
+        {
+            get { return _AuditStatus; }
+            set { _AuditStatus = value; }
+        }
+
+    }
 }

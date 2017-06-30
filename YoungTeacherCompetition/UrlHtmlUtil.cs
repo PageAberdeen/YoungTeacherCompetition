@@ -59,6 +59,11 @@ namespace ComputerBS
             HttpSessionState Session = HttpContext.Current.Session; ;
             return ((UserInfo)Session["User"]).UserNo.ToString();
         }
+        public static string GetUserID()
+        {
+            HttpSessionState Session = HttpContext.Current.Session; ;
+            return ((UserInfo)Session["User"]).UserID.ToString();
+        }
         public static string GetSchoolGroupID()
         {
             HttpSessionState Session = HttpContext.Current.Session; ;
@@ -74,6 +79,12 @@ namespace ComputerBS
         {
             string StrScript;
             StrScript = "<script language=javascript>alert('" + strMsg + "');window.location = 'Index.aspx';</script>";
+            System.Web.HttpContext.Current.Response.Write(StrScript);
+        }
+        public static void ShowMess(string strMsg)
+        {
+            string StrScript;
+            StrScript = "<script language=javascript>alert('" + strMsg + "');</script>";
             System.Web.HttpContext.Current.Response.Write(StrScript);
         }
         public static void MsgBoxExit(string strMsg)
@@ -334,12 +345,12 @@ namespace ComputerBS
                 else
                 {
                     sql.Clear();
-                    sql.Append("SELECT  a.UserNo,a.SchoolGroupID,b.ReviewMode,b.AllIDstr ");
-                    sql.Append("FROM dbo.TUserInfo a,dbo.TReview b ");
-                    sql.Append("WHERE a.ReviewID=b.ReviewID ");
+                    sql.Append("SELECT  a.UserNo,a.UserID,a.SchoolGroupID,b.ReviewMode,b.AllIDstr,c.Subjectid,c.Isleader ");
+                    sql.Append("FROM dbo.TUserInfo a JOIN  dbo.TReview b ");
+                    sql.Append("on a.ReviewID=b.ReviewID LEFT JOIN dbo.TReviewGroup c ON c.UserID=a.UserID ");
                     if (!String.IsNullOrEmpty(myUserNo))
                     {
-                        sql.AppendFormat(" AND a.UserNo={0}", Convert.ToInt32(myUserNo));
+                        sql.AppendFormat(" WHERE a.UserNo={0}", Convert.ToInt32(myUserNo));
                     }
                     sql.Append(" ORDER BY a.UserNo;");
 
@@ -347,6 +358,13 @@ namespace ComputerBS
                     if (dt.Rows.Count > 0)
                     {
                         string ReviewMode = dt.Rows[0]["ReviewMode"].ToString().Trim();//评审方式
+
+                        //按学科评审直接关联 TReviewGroup 表 关联用户名
+                        string UserID = GetUserID();  
+                        string Subjectid = dt.Rows[0]["Subjectid"].ToString().Trim();
+                        string Isleader = dt.Rows[0]["Isleader"].ToString().Trim();
+
+                        //按学校和学区评审会使用到AllIDstr SchoolGroupID 
                         string AllIDstr = dt.Rows[0]["AllIDstr"].ToString().Trim();    //评审关联ID
                         string SchoolGroupID = dt.Rows[0]["SchoolGroupID"].ToString().Trim();    //按区县评审会使用
                         sql.Clear();//先清空原先的SQL语句
@@ -354,6 +372,7 @@ namespace ComputerBS
                          * 这里分为两种评审方式
                          *    1、按学校 
                          *    2、按区县
+                         *    3、按学科
                          */
                         sql.Append("SELECT a.EnrollID,a.EntriesName,a.EnrolName,a.EnrolSex,d.DistrictName,b.SchoolName,");
                         sql.Append("e.SchoolGroupName,a.EntriesTime,c.EnrolScore,c.EnrolComment,c.UserID,a.EntriesURL,");
@@ -362,16 +381,40 @@ namespace ComputerBS
                         sql.Append(" JOIN TSubject s ON s.SubjectID=a.EnrolSubject");
                         sql.Append(" JOIN TDistrictInfo d ON d.DistrictID=b.DistrictID");
                         sql.Append(" JOIN TSchoolGroup e ON e.SchoolGroupID=b.SchoolGroupID");
-                        sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
-                        if ("学区".Equals(ReviewMode))
+                         if ("学区".Equals(ReviewMode))
                         {
                             //学区的评审方式逻辑
+                            sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
                             sql.AppendFormat("  WHERE b.SchoolGroupID = {0}  AND b.DistrictID in ({1}) ", SchoolGroupID, AllIDstr);
+                        }
+                        else if ("学校".Equals(ReviewMode))
+                        {
+                            //按学校评审
+                            sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
+                            sql.AppendFormat("  WHERE b.SchoolID in ({0}) ", AllIDstr);
+                            
+                        }
+                        else if ("学科".Equals(ReviewMode))
+                        {
+                            //按学科评审
+                            if (Isleader.Equals("1"))
+	                        {
+                                // 1表示是组长，组长能够查看另外两个人的评审情况
+                                //这里是按学科评审，所以只需查询对应学科的全部评审数据即可
+                                sql.Append(" LEFT JOIN TEntriesInfo c ON c.EnrolInfoID=a.EnrollID");                                
+                                sql.AppendFormat(" WHERE a.EnrolSubject = {0} ", Subjectid);
+	                        }
+                            else
+	                        {
+                                sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
+                                sql.AppendFormat(" WHERE a.EnrolSubject = {0} ",Subjectid);
+	                        }
+                           
+                            
                         }
                         else
                         {
-                            //按学校评审
-                            sql.AppendFormat("  WHERE b.SchoolID in ({0}) ", AllIDstr);
+                            throw new Exception("不存在【" + ReviewMode + "】这种评审方式！");
                         }
                         //sql.AppendFormat(" AND c.UserID = {0} ", myUserNo);
                         sql.Append(" AND a.EntriesName IS NOT NULL;");
@@ -383,6 +426,276 @@ namespace ComputerBS
                         throw new Exception("该用户不具备评审权限！");
                     }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataTable GetTEnrolInfoByReview(string myUserNo, bool isAdmin, ClsFindText whereRecord)//评审人评审信息
+        {
+            StringBuilder sql = new StringBuilder();
+            DataTable dt;
+            try
+            {
+                if (isAdmin)//是管理员查询全部
+                {
+                    sql.Clear();
+                    sql.Append("SELECT a.EnrollID,a.EntriesName,a.EnrolName,a.EnrolSex,d.DistrictName,b.SchoolName,");
+                    sql.Append("e.SchoolGroupName,a.EntriesTime,c.EnrolScore,c.EnrolComment,c.UserID,a.EntriesURL,");
+                    sql.Append("(CASE  c.AuditStatus WHEN 1 THEN '已审核' ELSE '未审核' END) as AuditStatus,c.EnrolTime,s.SubjectName");
+                    sql.Append(" FROM TEnrolInfo a JOIN TSchoolInfo b ON a.SchoolID=b.SchoolID ");
+                    sql.Append(" JOIN TDistrictInfo d ON d.DistrictID=b.DistrictID");
+                    sql.Append(" JOIN TSubject s ON s.SubjectID=a.EnrolSubject");
+                    sql.Append(" JOIN TSchoolGroup e ON e.SchoolGroupID=b.SchoolGroupID");
+                    sql.Append(" LEFT JOIN (SELECT g.* FROM (SELECT EnrolInfoID,max(EntriesID) as EntriesID ");
+                    sql.Append(" FROM dbo.TEntriesInfo  GROUP BY ");
+                    sql.Append(" EnrolInfoID)as f LEFT JOIN TEntriesInfo g ON f.EntriesID=g.EntriesID) c ");
+                    sql.Append("  ON c.EnrolInfoID=a.EnrollID");
+                    sql.Append("  where 1=1 ");
+
+                    if (!whereRecord.District.Equals("0"))
+                    {
+                        sql.AppendFormat(" AND  d.DistrictID = {0} ", whereRecord.District); //学区 
+                    }
+                    if (!whereRecord.School.Equals("0"))
+                    {
+                        sql.AppendFormat(" AND  a.SchoolID = {0} ", whereRecord.School);   //学校
+                    }
+                    if (!whereRecord.Subject.Equals("0"))
+                    {
+                        sql.AppendFormat(" AND  a.EnrolSubject = {0} ", whereRecord.Subject);//学科
+                    }
+                    if (!whereRecord.SchoolGroup.Equals("0"))
+                    {
+                        sql.AppendFormat(" AND  b.SchoolGroupID = {0} ", whereRecord.SchoolGroup);//学段
+                    }
+                    if (!string.IsNullOrEmpty(whereRecord.AuditStatus))
+                    {
+                        if (whereRecord.AuditStatus.Equals("1"))
+                        {
+                            sql.AppendFormat(" AND  c.AuditStatus = {0} ", whereRecord.AuditStatus);//评审状态
+                        }
+                        else
+                        {
+                            sql.AppendFormat(" AND  c.AuditStatus IS NULL ");//评审状态
+                        }
+                                
+                       
+                    }
+                    
+                    
+                    
+                    
+                    
+                    sql.Append("  AND a.EntriesName IS NOT NULL ");
+                    dt = DbHelperSQL.Query(sql.ToString()).Tables[0];
+                }
+                else
+                {
+                    sql.Clear();
+                    sql.Append("SELECT  a.UserNo,a.UserID,a.SchoolGroupID,b.ReviewMode,b.AllIDstr,c.Subjectid,c.Isleader ");
+                    sql.Append("FROM dbo.TUserInfo a JOIN  dbo.TReview b ");
+                    sql.Append("on a.ReviewID=b.ReviewID LEFT JOIN dbo.TReviewGroup c ON c.UserID=a.UserID ");
+                    if (!String.IsNullOrEmpty(myUserNo))
+                    {
+                        sql.AppendFormat(" WHERE a.UserNo={0}", Convert.ToInt32(myUserNo));
+                    }
+                    sql.Append(" ORDER BY a.UserNo;");
+
+                    dt = DbHelperSQL.Query(sql.ToString()).Tables[0];
+                    if (dt.Rows.Count > 0)
+                    {
+                        string ReviewMode = dt.Rows[0]["ReviewMode"].ToString().Trim();//评审方式
+
+                        //按学科评审直接关联 TReviewGroup 表 关联用户名
+                        string UserID = GetUserID();
+                        string Subjectid = dt.Rows[0]["Subjectid"].ToString().Trim();
+                        string Isleader = dt.Rows[0]["Isleader"].ToString().Trim();
+
+                        //按学校和学区评审会使用到AllIDstr SchoolGroupID 
+                        string AllIDstr = dt.Rows[0]["AllIDstr"].ToString().Trim();    //评审关联ID
+                        string SchoolGroupID = dt.Rows[0]["SchoolGroupID"].ToString().Trim();    //按区县评审会使用
+                        sql.Clear();//先清空原先的SQL语句
+                        /*
+                         * 这里分为两种评审方式
+                         *    1、按学校 
+                         *    2、按区县
+                         *    3、按学科
+                         */
+                        sql.Append("SELECT a.EnrollID,a.EntriesName,a.EnrolName,a.EnrolSex,d.DistrictName,b.SchoolName,");
+                        sql.Append("e.SchoolGroupName,a.EntriesTime,c.EnrolScore,c.EnrolComment,c.UserID,a.EntriesURL,");
+                        sql.Append("(CASE  c.AuditStatus WHEN 1 THEN '已审核' ELSE '未审核' END) as AuditStatus,c.EnrolTime,s.SubjectName");
+                        sql.Append(" FROM TEnrolInfo a JOIN TSchoolInfo b ON a.SchoolID=b.SchoolID ");
+                        sql.Append(" JOIN TSubject s ON s.SubjectID=a.EnrolSubject");
+                        sql.Append(" JOIN TDistrictInfo d ON d.DistrictID=b.DistrictID");
+                        sql.Append(" JOIN TSchoolGroup e ON e.SchoolGroupID=b.SchoolGroupID");
+                        if ("学区".Equals(ReviewMode))
+                        {
+                            //学区的评审方式逻辑
+                            sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
+                            sql.AppendFormat("  WHERE b.SchoolGroupID = {0}  AND b.DistrictID in ({1}) ", SchoolGroupID, AllIDstr);
+                        }
+                        else if ("学校".Equals(ReviewMode))
+                        {
+                            //按学校评审
+                            sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
+                            sql.AppendFormat("  WHERE b.SchoolID in ({0}) ", AllIDstr);
+
+                        }
+                        else if ("学科".Equals(ReviewMode))
+                        {
+                            //按学科评审
+                            if (Isleader.Equals("1"))
+                            {
+                                // 1表示是组长，组长能够查看另外两个人的评审情况
+                                //这里是按学科评审，所以只需查询对应学科的全部评审数据即可
+                                sql.Append(" LEFT JOIN TEntriesInfo c ON c.EnrolInfoID=a.EnrollID");
+                                sql.AppendFormat(" WHERE a.EnrolSubject = {0} ", Subjectid);
+                            }
+                            else
+                            {
+                                sql.AppendFormat(" LEFT JOIN (SELECT * from  dbo.TEntriesInfo where UserID={0}) as c ON c.EnrolInfoID=a.EnrollID", myUserNo);
+                                sql.AppendFormat(" WHERE a.EnrolSubject = {0} ", Subjectid);
+                            }
+
+
+                        }
+                        else
+                        {
+                            throw new Exception("不存在【" + ReviewMode + "】这种评审方式！");
+                        }
+                        if (!whereRecord.District.Equals("0"))
+                        {
+                            sql.AppendFormat(" AND  d.DistrictID = {0} ", whereRecord.District); //学区 
+                        }
+                        if (!whereRecord.School.Equals("0"))
+                        {
+                            sql.AppendFormat(" AND  a.SchoolID = {0} ", whereRecord.School);   //学校
+                        }
+                        if (!whereRecord.Subject.Equals("0"))
+                        {
+                            sql.AppendFormat(" AND  a.EnrolSubject = {0} ", whereRecord.Subject);//学科
+                        }
+                        if (!whereRecord.SchoolGroup.Equals("0"))
+                        {
+                            sql.AppendFormat(" AND  b.SchoolGroupID = {0} ", whereRecord.SchoolGroup);//学段
+                        }
+                        if (!string.IsNullOrEmpty(whereRecord.AuditStatus))
+                        {
+                            if (whereRecord.AuditStatus.Equals("1"))
+                            {
+                                sql.AppendFormat(" AND  c.AuditStatus = {0} ", whereRecord.AuditStatus);//评审状态
+                            }
+                            else
+                            {
+                                sql.AppendFormat(" AND  c.AuditStatus IS NULL ");//评审状态
+                            }
+                        }
+
+                        sql.Append(" AND a.EntriesName IS NOT NULL;");
+
+                        dt = DbHelperSQL.Query(sql.ToString()).Tables[0];
+                    }
+                    else
+                    {
+                        throw new Exception("该用户不具备评审权限！");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return dt;
+        }
+
+
+        public static DataTable selectEnrolInfoByKeyword(string selectStr)//管理员搜索
+        {
+            StringBuilder sql = new StringBuilder();
+            DataTable dt;
+            try
+            { 
+                sql.Append("SELECT a.EnrollID,a.EntriesName,a.EnrolName,a.EnrolSex,d.DistrictName,b.SchoolName,");
+                sql.Append("e.SchoolGroupName,a.EntriesTime,c.EnrolScore,c.EnrolComment,c.UserID,a.EntriesURL,");
+                sql.Append("(CASE  c.AuditStatus WHEN 1 THEN '已审核' ELSE '未审核' END) as AuditStatus,c.EnrolTime,s.SubjectName");
+                sql.Append(" FROM TEnrolInfo a JOIN TSchoolInfo b ON a.SchoolID=b.SchoolID ");
+                sql.Append(" JOIN TDistrictInfo d ON d.DistrictID=b.DistrictID");
+                sql.Append(" JOIN TSubject s ON s.SubjectID=a.EnrolSubject");
+                sql.Append(" JOIN TSchoolGroup e ON e.SchoolGroupID=b.SchoolGroupID");
+                sql.Append(" LEFT JOIN (SELECT g.* FROM (SELECT EnrolInfoID,max(EntriesID) as EntriesID ");
+                sql.Append(" FROM dbo.TEntriesInfo  GROUP BY ");
+                sql.Append(" EnrolInfoID)as f LEFT JOIN TEntriesInfo g ON f.EntriesID=g.EntriesID) c ");
+                sql.Append("  ON c.EnrolInfoID=a.EnrollID");
+                sql.Append("  where 1=1 ");
+                if (!string.IsNullOrEmpty(selectStr))
+                {
+                    sql.AppendFormat(" AND (a.EntriesName LIKE '%{0}%' ", selectStr);
+                    sql.AppendFormat(" or a.EnrolName LIKE '%{0}%' )", selectStr);
+                }
+
+                sql.Append("  AND a.EntriesName IS NOT NULL ");
+                
+                
+                dt = DbHelperSQL.Query(sql.ToString()).Tables[0];
+                
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return dt;
+        }
+
+        //管理员打印作品评审结果
+        public static DataTable PrintEnrollInfo(ClsFindText whereRecord)
+        {
+            StringBuilder sql = new StringBuilder();
+            DataTable dt;
+            try
+            {
+                sql.Append("SELECT b.SchoolName 学校,a.EnrolName 姓名,a.EnrolSex 性别,");
+                sql.Append("  a.EnrolBirthday 出生年月,a.EnrolTeacherTitle 职称,");
+                sql.Append("  s.SubjectName 学科,a.EnrolWorkYear 教龄,a.EnrolTel 联系电话,");
+                sql.Append("  a.EntriesName 作品名称,f.EnrolScore 平均分,f.EnrolComment 评语 ");
+                sql.Append("  FROM TEnrolInfo a JOIN TSchoolInfo b ON a.SchoolID=b.SchoolID ");
+                sql.Append("  JOIN TDistrictInfo d ON d.DistrictID=b.DistrictID");
+                sql.Append("  JOIN TSubject s ON s.SubjectID=a.EnrolSubject");
+                sql.Append("  JOIN TSchoolGroup e ON e.SchoolGroupID=b.SchoolGroupID");
+                sql.Append("  JOIN ( SELECT  g.*,(select STUFF((Select CHAR(10)+Convert(varchar(50),EnrolComment) ");
+                sql.Append("  FROM TEntriesInfo where g.EnrolInfoID = EnrolInfoID FOR XML PATH('')),1,1,'')) EnrolComment");
+                sql.Append("  FROM (SELECT c.EnrolInfoID, Convert(decimal(18,1),avg(c.EnrolScore)) EnrolScore ");
+                sql.Append("  FROM TEntriesInfo c ");
+                sql.Append("  GROUP BY c.EnrolInfoID) g) as  f  ON f.EnrolInfoID=a.EnrollID");
+                sql.Append("  WHERE 1=1");
+
+                if (!whereRecord.District.Equals("0"))
+                {
+                    sql.AppendFormat(" AND  d.DistrictID = {0} ", whereRecord.District); //学区 
+                }
+                if (!whereRecord.School.Equals("0"))
+                {
+                    sql.AppendFormat(" AND  a.SchoolID = {0} ", whereRecord.School);   //学校
+                }
+                if (!whereRecord.Subject.Equals("0"))
+                {
+                    sql.AppendFormat(" AND  a.EnrolSubject = {0} ", whereRecord.Subject);//学科
+                }
+                if (!whereRecord.SchoolGroup.Equals("0"))
+                {
+                    sql.AppendFormat(" AND  b.SchoolGroupID = {0} ", whereRecord.SchoolGroup);//学段
+                }               
+
+                dt = DbHelperSQL.Query(sql.ToString()).Tables[0];                
 
             }
             catch (Exception ex)

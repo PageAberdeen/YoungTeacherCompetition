@@ -12,11 +12,18 @@ namespace ComputerBS
     public partial class ShowBestWorks : System.Web.UI.Page
     {
         private static string UserNo;
+        private static ClsFindText FindTextRecord = new ClsFindText();
         public static ClsWorksInfo[] ClsWorksInfoArr;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                FindTextRecord.AuditStatus = "";
+                FindTextRecord.District = "0";
+                FindTextRecord.School = "0";
+                FindTextRecord.SchoolGroup = "0";
+                FindTextRecord.Subject = "0";
+
                 if (UrlHtmlUtil.GetUserRole().Equals("评审人"))
                 {
                     UserNo = UrlHtmlUtil.GetUserNo();
@@ -57,6 +64,7 @@ namespace ComputerBS
             if (isadmin)
             {
                 this.inputtext.Style.Add("display", "inline-block");
+                liSubject.Style.Add("display", "block");
                 //this.outdata.Style.Add("display", "block");
                 this.names.Style.Add("display", "inline-block");
                 But_outdata.Visible = true;
@@ -64,6 +72,7 @@ namespace ComputerBS
             else
             {
                 this.inputtext.Style.Add("display", "none");
+                liSubject.Style.Add("display", "none");
                 //this.outdata.Style.Add("display", "none");
                 this.names.Style.Add("display", "none");
                 But_outdata.Visible = false;
@@ -175,8 +184,18 @@ namespace ComputerBS
 
         protected void But_outdata_Click(object sender, EventArgs e)
         {
-            DataTable dt = UrlHtmlUtil.GetTEnrolInfoByReview(UrlHtmlUtil.GetUserNo(), false);            
-            EportAllDataToExcel(dt);
+            DataTable dt;
+            if (UrlHtmlUtil.GetUserRole().Equals("管理员"))
+            {
+                //参数：传送筛选条件查询全部记录
+                dt = UrlHtmlUtil.PrintEnrollInfo(FindTextRecord);
+                EportAllDataToExcel(dt);
+            }
+            else
+            {
+                UrlHtmlUtil.ShowMess("您不具备该权限！");
+            }
+            
         }
 
         private static void EportAllDataToExcel(DataTable dt)
@@ -206,6 +225,94 @@ namespace ComputerBS
             }
         }
 
-      
+
+
+        protected void DropListSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropListFillData((DropDownList)sender);
+        }
+
+        private bool DropListFillData(DropDownList dp)
+        {
+            string sText = dp.Text;
+            string sName = dp.ID.ToString().Trim();
+            if ("DropList_District".Equals(sName))//学区
+            {
+                FindTextRecord.District = sText;
+            }
+            else if ("DropList_School".Equals(sName))//学校
+	        {
+                FindTextRecord.School = sText;
+	        }
+            else if ("DropList_SchoolGroup".Equals(sName))//学段
+	        {
+                FindTextRecord.SchoolGroup = sText;
+	        }
+            else if ("DropList_Subject".Equals(sName))//学科
+	        {
+                FindTextRecord.Subject = sText;
+	        }
+            else if ("DropList_AuditStatus".Equals(sName))//评审状态
+	        {
+                if (sText.Equals("全部"))
+                {
+                    sText = "";  
+                }
+                FindTextRecord.AuditStatus = sText;
+	        }
+            else
+	        {
+                UrlHtmlUtil.ShowMess("请添加该控件的事件绑定！");
+                return false;
+	        }
+            if (UrlHtmlUtil.GetUserRole().Equals("评审人"))
+            {
+                DataTable dt = UrlHtmlUtil.GetTEnrolInfoByReview(UserNo, false,FindTextRecord);//传评审人ID进去，返回对应评审信息
+                GridViewData.DataSource = dt;
+                GridViewData.DataBind();
+                if (dt.Rows.Count > 0)
+                {
+                    FullDataToclsClsWorksArr(dt);
+                } 
+            }
+            else if (UrlHtmlUtil.GetUserRole().Equals("管理员"))
+            {
+                DataTable dt = UrlHtmlUtil.GetTEnrolInfoByReview(UserNo, true, FindTextRecord);//传评审人ID进去，返回对应评审信息
+                GridViewData.DataSource = dt;
+                GridViewData.DataBind();
+                if (dt.Rows.Count > 0)
+                {
+                    FullDataToclsClsWorksArr(dt);
+                } 
+            }
+            else
+            {
+                UrlHtmlUtil.ShowMess("您不具备该权限！");
+            }
+
+            return true;
+        }
+
+        protected void Btn_Select_Click(object sender, EventArgs e)
+        {
+            string sValue = inputtext.Value.ToString().Trim();
+            if (string.IsNullOrEmpty(sValue))
+            {
+                UrlHtmlUtil.ShowMess("请先输入搜索关键字！");
+            }
+            else
+            {
+               DataTable dt = UrlHtmlUtil.selectEnrolInfoByKeyword(sValue);
+               GridViewData.DataSource = dt;
+               GridViewData.DataBind();
+               if (dt.Rows.Count > 0)
+               {
+                   FullDataToclsClsWorksArr(dt);
+               }
+            }
+        }
+
+
+
     }
 }
